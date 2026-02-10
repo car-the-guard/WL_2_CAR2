@@ -1,1 +1,9 @@
 sound_trigger: listening on port 38473, sound file: alert.mp3 (gst-play-1.0)
+Now playing /mnt/sdcard/car2_Revised_1_Porting/run_qtt/alert.mp3
+Prerolling...
+(gst-play-1.0:7781): GStreamer-Audio-CRITICAL **: 10:58:31.392: file ../gst-libs/gst/audio/gstaudioringbuffer.c: line 2054 (gst_audio_ring_buffer_set_channel_positions): should not be reached
+Redistribute latency...
+Prerolled.Redistribute latency...
+0:00:00.0 / 0:00:02.2       0:00:00.1 / 0:00:02.2       0:00:00.2 / 0:00:02.2       0:00:00.3 / 0:00:02.2       0:00:00.4 / 0:00:02.2       0:00:00.5 / 0:00:02.2       0:00:00.6 / 0:00:02.2       0:00:00.7 / 0:00:02.2       0:00:00.8 / 0:00:02.2       0:00:00.9 / 0:00:02.2       0:00:01.0 / 0:00:02.2       0:00:01.1 / 0:00:02.2       0:00:01.2 / 0:00:02.2       0:00:01.3 / 0:00:02.2       0:00:01.4 / 0:00:02.2       0:00:01.5 / 0:00:02.2       0:00:01.6 / 0:00:02.2       0:00:01.7 / 0:00:02.2       0:00:01.8 / 0:00:02.2       0:00:01.9 / 0:00:02.2       0:00:02.0 / 0:00:02.2       0:00:02.1 / 0:00:02.2       0:00:02.2 / 0:00:02.2       0:00:02.2 / 0:00:02.2       
+Reached end of play list.
+

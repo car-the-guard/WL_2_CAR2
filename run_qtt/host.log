@@ -1,3 +1,6 @@
-defaultServiceProvider::requestService(): no service found for - "org.qt-project.qt.mediaplayer"
-file:///mnt/sdcard/car2_Revised_1_Porting/run_qtt/test_spk.qml:398: TypeError: Cannot read property 'top' of undefined
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+Failed to create wl_display (No such file or directory)
+qt.qpa.plugin: Could not load the Qt platform plugin "wayland" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.
+

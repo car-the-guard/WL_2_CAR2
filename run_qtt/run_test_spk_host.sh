@@ -6,8 +6,21 @@ cd "$SCRIPT_DIR"
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 export WAYLAND_DISPLAY="${WAYLAND_DISPLAY:-wayland-0}"
 # UID를 1000으로 강제 지정하여 Weston 소켓 경로 고정
-export XDG_RUNTIME_DIR=/run/user/1000
+export XDG_RUNTIME_DIR=/run/user/0
 #export WAYLAND_DISPLAY=wayland-0
+
+# [추가] ALSA 설정 파일 경로를 직접 지정 (권한 문제 방지)
+#export ALSA_CONFIG_PATH=/etc/asound.conf
+#export ALSA_CARD=1
+#export QT_ALSA_DEVICE=hw:1
+
+# [추가] GStreamer가 사용할 오디오 싱크 명시
+#export GST_ALSA_DEFAULT_DEVICE=hw:1
+# 스크립트 상단에 추가
+export ALSA_CONFIG_PATH=/etc/asound.conf
+export ALSA_CARD=1
+# GStreamer가 ALSA 장치를 명확히 인식하도록 설정
+export GST_ALSA_DEFAULT_DEVICE=plug:default
 
 # /mnt/sdcard 경로를 읽기/쓰기(rw) 모드로 다시 마운트
 sudo mount -o remount,rw /mnt/sdcard

@@ -4,10 +4,10 @@
 cd "$(dirname "$0")"
 
  echo "Weston 서버 재시작 중..."
-# sudo systemctl stop weston
-# sleep 2
+sudo systemctl stop weston
+sleep 2
 sudo systemctl start weston
-# sleep 2
+sleep 2
 # --- 소켓 생성 확인 루프 추가 ---
 MAX_RETRIES=10
 COUNT=0
@@ -29,10 +29,10 @@ sudo fuser -k 38473/tcp 2>/dev/null #qml port# 38473 사고 정보를 38473으�
 sudo fuser -k 38474/tcp 2>/dev/null
 sleep 2
 
-#echo "sound_trigger 시작 (백그라운드, 로그: sound.log)..."
-#./sound_trigger 2>&1 | tee sound.log &
-#SOUND_PID=$!
-#sleep 1
+echo "sound_trigger 시작 (백그라운드, 로그: sound.log)..."
+./sound_trigger 2>&1 | tee sound.log &
+SOUND_PID=$!
+sleep 1
 
 echo "test_spk_host 시작 (백그라운드, 로그: host.log)..."
 # Weston = topst(1000), /dev/dri 접근 = render 그룹 → topst로 실행 (sudo 없이)
