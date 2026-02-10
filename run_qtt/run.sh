@@ -30,9 +30,13 @@ sudo fuser -k 38474/tcp 2>/dev/null
 sleep 2
 
 #echo "sound_trigger 시작 (백그라운드, 로그: sound.log)..."
-#./sound_trigger 2>&1 | tee sound.log &
-#SOUND_PID=$!
-#sleep 1
+./sound_trigger 2>&1 | tee sound.log &
+SOUND_PID=$!
+sleep 1
+
+# ALSA 장치 고정
+export ALSA_CARD=1
+export QT_ALSA_DEVICE=hw:1
 
 echo "test_spk_host 시작 (백그라운드, 로그: host.log)..."
 # Weston = topst(1000), /dev/dri 접근 = render 그룹 → topst로 실행 (sudo 없이)

@@ -14,6 +14,11 @@ sudo mount -o remount,rw /mnt/sdcard
 export QT_QUICK_BACKEND=software  # Qt Quick에게 CPU 렌더링 강제
 export QT_QPA_PLATFORM=wayland    # 화면 전송은 Wayland 사용
 
+export QT_MULTIMEDIA_PREFERRED_PLUGINS=gstreamer
+# ALSA 장치 고정
+export ALSA_CARD=1
+export QT_ALSA_DEVICE=hw:1
+
 # EGL 0x3005 회피: SSH 세션에서 GPU 접근 불가 → 소프트웨어 렌더링 사용
 export QT_OPENGL=software
 export LIBGL_ALWAYS_SOFTWARE=1
