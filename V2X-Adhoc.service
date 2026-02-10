@@ -1,0 +1,19 @@
+[Unit]
+Description=V2X Ad-hoc Network Setup Service
+
+# 네트워크 타겟과 NetworkManager가 준비된 후에 실행
+# 1. NetworkManager와 avahi-daemon이 완전히 올라온 후에 실행하거나, 
+# 아예 충돌이 나지 않도록 실행 순서를 보장합니다.
+After=network.target NetworkManager.service avahi-daemon.service
+
+
+
+[Service]
+Type=oneshot
+# 하드웨어 인식 대기
+ExecStartPre=/bin/sleep 2
+ExecStart=/usr/local/bin/setup-V2Xadhoc.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
