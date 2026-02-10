@@ -6,7 +6,7 @@ cd "$SCRIPT_DIR"
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
 export WAYLAND_DISPLAY="${WAYLAND_DISPLAY:-wayland-0}"
 # UID를 1000으로 강제 지정하여 Weston 소켓 경로 고정
-export XDG_RUNTIME_DIR=/run/user/1000
+export XDG_RUNTIME_DIR=/run/user/0
 #export WAYLAND_DISPLAY=wayland-0
 
 # /mnt/sdcard 경로를 읽기/쓰기(rw) 모드로 다시 마운트

@@ -1,8 +1,5 @@
 
 [Unit]
-#Description=Weston Wayland compositor
-#After=systemd-user-sessions.service gdm3.service
-#Conflicts=getty@tty1.service
 
 # [수정] 부팅 시 그래픽 드라이버가 로드될 시간을 벌기 위해 After 항목 강화
 #Description=Weston Wayland compositor
@@ -19,16 +16,10 @@ Conflicts=getty@tty1.service gdm3.service gdm.service
 
 [Service]
 Type=simple
-#User=topst
-
-#Group=weston-launch
-
 
 # [변경] sudo 권한 문제를 피하기 위해 실행 주체를 root로 변경
 User=root
 Group=root
-
-
 
 # [추가] topst 유저가 tty 권한을 획득하기 위해 필수
 PAMName=login
@@ -39,23 +30,13 @@ Environment=XDG_RUNTIME_DIR=/run/user/1000
 
 # 런타임 디렉토리 생성 (실패해도 무시하도록 '-' 사용)
 ExecStartPre=/usr/bin/sleep 2
+
 ExecStartPre=-/usr/bin/mkdir -p /run/user/1000
-#ExecStartPre=-/usr/bin/chown topst:topst /run/user/1000
-#ExecStartPre=-/usr/bin/chmod 700 /run/user/1000
 # [중요] 폴더 소유권을 topst에게 미리 부여
 ExecStartPre=/usr/bin/chown -R topst:topst /run/user/1000
 ExecStartPre=/usr/bin/chmod 700 /run/user/1000
 
-#ExecStartPre=/bin/sh -c 'mkdir -p /run/user/1000 && chown topst:topst /run/user/1000 && chmod 700 /run/user/1000'
-#ExecStart=/usr/bin/weston-launch
 
-# [수정] 서비스 안에서 stop을 쓰는 대신, 실행 전 환경을 깨끗이 정리만 합니다.
-#ExecStartPre=/usr/bin/sleep 2
-
-#ExecStartPre=-/usr/bin/rm -rf /run/user/1000
-ExecStartPre=/usr/bin/mkdir -p /run/user/1000
-ExecStartPre=/usr/bin/chown -R topst:topst /run/user/1000
-ExecStartPre=/usr/bin/chmod 700 /run/user/1000
 
 #ExecStart=/usr/bin/weston --backend=drm-backend.so --drm-device=card0 --tty=1 --continue-without-input
 # [수정] 공백 제거: /usr/bin/sudo 로 연결
@@ -64,17 +45,21 @@ ExecStartPre=/usr/bin/chmod 700 /run/user/1000
 
 # [수정] 백그라운드(&) 제거: Weston을 직접 메인으로 실행합니다.
 #ExecStart=/usr/bin/sudo -E /usr/bin/weston --backend=drm-backend.so --drm-device=card0 --tty=1 --continue-without-input
-# [변경] sudo 없이 직접 실행 (이미 root 권한임)
+
+
+# 2. Weston 실행
 ExecStart=/usr/bin/weston --backend=drm-backend.so --drm-device=card0 --tty=1 --continue-without-input
 
-# [추가] Weston이 실행된 직후 별도로 소유권을 변경합니다.
-# '-'를 붙여 소켓이 아직 생성 중이라 실패해도 서비스가 죽지 않게 합니다.
-#ExecStartPost=/usr/bin/sleep 2
-#ExecStartPost=-/usr/bin/sudo -E /usr/bin/chown topst:topst /run/user/1000/wayland-0
 
 # [추가] 소켓이 생성되면 소유권을 topst로 변경하여 Qt 앱 접속 허용
-ExecStartPost=/usr/bin/sleep 2
+#ExecStartPost=/usr/bin/sleep 2
+#ExecStartPost=-/usr/bin/chown topst:topst /run/user/1000/wayland-0
+
+# 3. 소켓 파일 권한 이전 (중요!)
+# Weston이 소켓을 만들 시간을 벌기 위해 sleep을 준 뒤 chown을 실행합니다.
+ExecStartPost=/usr/bin/sleep 3
 ExecStartPost=-/usr/bin/chown topst:topst /run/user/1000/wayland-0
+
 
 Restart=on-failure
 RestartSec=5

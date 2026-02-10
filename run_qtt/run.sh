@@ -4,23 +4,23 @@
 cd "$(dirname "$0")"
 
  echo "Weston 서버 재시작 중..."
-# sudo systemctl stop weston
-# sleep 2
+sudo systemctl stop weston
+sleep 2
 sudo systemctl start weston
 # sleep 2
 # --- 소켓 생성 확인 루프 추가 ---
 MAX_RETRIES=10
 COUNT=0
-while [ ! -S /run/user/1000/wayland-0 ]; do
-    if [ $COUNT -eq $MAX_RETRIES ]; then
-        echo "에러: Weston 소켓 생성 타임아웃!"
-        exit 1
-    fi
-    echo "Wayland 소켓 대기 중... ($COUNT/$MAX_RETRIES)"
-    sleep 1
-    ((COUNT++))
-done
-echo "Wayland 소켓 확인 완료!"
+# while [ ! -S /run/user/0/wayland-0 ]; do
+#     if [ $COUNT -eq $MAX_RETRIES ]; then
+#         echo "에러: Weston 소켓 생성 타임아웃!"
+#         exit 1
+#     fi
+#     echo "Wayland 소켓 대기 중... ($COUNT/$MAX_RETRIES)"
+#     sleep 1
+#     ((COUNT++))
+# done
+# echo "Wayland 소켓 확인 완료!"
 # ----------------------------
 
 
