@@ -88,7 +88,7 @@ void signal_handler(int sig) {
     Q_push(&q_pkt_val, NULL); Q_push(&q_val_pkt_tx, NULL);
     Q_push(&q_pkt_sec_tx, NULL); Q_push(&q_sec_tx_wl_tx, NULL);
     Q_push(&q_val_yocto, NULL); Q_push(&q_yocto_to_driving, NULL);
-    Q_push(&q_yocto_if_to_pkt_tx, NULL);
+    Q_push(&q_yocto_if_to_pkt_tx, NULL); Q_push(&q_pkt_val, NULL);
 
     Q_push(&q_rx_filter, NULL);
     Q_push(&q_filter_sec_rx, NULL);
@@ -110,7 +110,7 @@ static uint64_t get_current_timestamp_ms() {
 int main(int argc, char *argv[]) {
     // 1. 초기화 및 시그널 설정
     signal(SIGINT, signal_handler);
-    g_sender_id = (argc > 1) ? (uint32_t)strtol(argv[1], NULL, 16) : 0x3333;
+    g_sender_id = (argc > 1) ? (uint32_t)strtol(argv[1], NULL, 16) : 0x2222;
     
     
   
@@ -120,6 +120,7 @@ int main(int argc, char *argv[]) {
     Q_init(&q_val_pkt_tx);
     Q_init(&q_pkt_sec_tx);
     Q_init(&q_sec_tx_wl_tx);
+    Q_init(&q_pkt_val);
     Q_init(&q_val_yocto);
     Q_init(&q_yocto_to_driving);
     Q_init(&q_yocto_if_to_pkt_tx); 
@@ -167,7 +168,7 @@ int main(int argc, char *argv[]) {
     
     // 3. 메인 모니터링 루프
     pthread_t test_th;
-    pthread_create(&test_th, NULL, run_filter_test, NULL);
+    //pthread_create(&test_th, NULL, run_filter_test, NULL);
     
     while (g_keep_running) {
         

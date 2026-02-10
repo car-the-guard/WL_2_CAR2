@@ -81,7 +81,7 @@ void *thread_val(void *arg) {
         wl1_packet_t *rx = Q_pop(&q_pkt_val);
     
         if (rx) {
-            DBG_INFO("[DEBUG-VAL] >>> VAL Controller Got Data! From: 0x%X\n", rx->sender.sender_id);
+            DBG_INFO("thread_val Got Data!%X\n");
             
             // 1. 내 현재 상태 스냅샷 가져오기
             pthread_mutex_lock(&g_driving_status.lock);
@@ -105,19 +105,19 @@ void *thread_val(void *arg) {
             double alt_diff = fabs(my_alt - target_alt);
             int head_diff = get_angle_diff(my_heading, acc_heading);
 
-            printf("[CHECK-VAL] 수신: From 0x%X, 거리:%.2fm, 고도차:%.1fm, 방향차:%d도\n", 
+            DBG_INFO("[CHECK] 수신: From 0x%X, 거리:%.2fm, 고도차:%.1fm, 방향차:%d도\n", 
                     rx->sender.sender_id, dist_2d, alt_diff, head_diff);
             
             // 유효 범위 및 방향성 필터링
             // 내 패킷 제외 && 거리/고도 유효
-            if (rx->sender.sender_id != g_sender_id && dist_2d < DIST_LIMIT && alt_diff < ALT_LIMIT) {
+            if (dist_2d < DIST_LIMIT && alt_diff < ALT_LIMIT) {
                 
                 // 동일 방향성 확인 (45도 이내)
                 if (head_diff <= HEADING_LIMIT) {
                     int mode = (dist_2d > 500.0) ? MODE_ALERT : MODE_RELAY;
                     uint16_t display_dist = (uint16_t)dist_2d;
 
-                    printf("\x1b[1;32m[VAL-WARN] 동일 방향 사고! LCD 출력 시도\x1b[0m\n");
+                    //printf("\x1b[1;32m[VAL-WARN] 유효 방향 사고! LCD \x1b[0m\n");
                     //LCD_display_v2x_mode(mode, rx->sender.sender_id, rx->accident.accident_id, display_dist, rx->accident.lane, rx->accident.type);
 
                     // --- 사고 리스트 업데이트 ---
@@ -142,10 +142,10 @@ void *thread_val(void *arg) {
                         memcpy(&accident_list[target_idx].data.accident, &rx->accident, sizeof(wl1_accident_t));
                         accident_list[target_idx].data.analysis.dist_3d = dist_2d;
                         accident_list[target_idx].data.analysis.is_danger = (dist_2d < 100.0);
-                        DBG_INFO("[VAL-DBG] accident_list[%d] 등록 -> ID:0x%lX (WL-2 후보)\n", target_idx, rx->accident.accident_id);
+                        DBG_INFO("accident_list[%d] 등록 -> ID:0x%lX (WL-2 후보)\n", target_idx, rx->accident.accident_id);
                     }
                 } else {
-                    DBG_INFO("\x1b[1;33m[VAL-SKIP] 반대 방향 사고 무시 (차이: %d도)\x1b[0m\n", head_diff);
+                    DBG_INFO("\x1b[1;33m[SKIP] 반대 방향 사고 무시 (차이: %d도)\x1b[0m\n", head_diff);
                 }
 
                 // --- 재전송(Relay) 로직 (방향 무관하게 수행) ---
@@ -156,7 +156,7 @@ void *thread_val(void *arg) {
                         relay->header.ttl--;
                         relay->sender.sender_id = g_sender_id;
                         Q_push(&q_val_pkt_tx, relay);
-                        DBG_INFO("[RELAY-ACT] 사고 0x%lX 패킷 중계 큐 삽입\n", relay->accident.accident_id);
+                        DBG_INFO("[RELAY-ACT] 사고 0x%lX 정보 재전송 큐 삽입\n", relay->accident.accident_id);
                     }
                 }
             } else {
