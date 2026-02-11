@@ -67,6 +67,8 @@ void *thread_sec_rx(void *arg) {
         wl1_packet_t *pkt = NULL;
         // [STEP 1] 우선순위 체크: 긴급 큐부터 확인 (기다리지 않음)
         pkt = Q_pop_nowait(&q_filter_sec_urgent);
+        // DBG_INFO("[SEC-RX] Verifying packet from 11 0x%X", pkt->sender.sender_id);
+
         Q_push(&q_sec_rx_pkt, pkt); 
         
         // [STEP 2] 긴급 패킷이 없으면 일반 큐에서 대기 (여기서 블로킹)
@@ -75,6 +77,8 @@ void *thread_sec_rx(void *arg) {
             // 구조상 여기서 너무 오래 잡혀있지 않게 pop_timeout 등을 쓰는 것도 방법입니다.
             // 일단은 일반적인 Q_pop으로 구현하되, 긴급 처리를 위해 짧은 sleep 후 루프를 돌립니다.
             pkt = Q_pop_nowait(&q_filter_sec_rx);
+            // DBG_INFO("[SEC-RX] Verifying packet from 22 0x%X", pkt->sender.sender_id);
+
             Q_push(&q_sec_rx_pkt, pkt); 
             
             if (pkt == NULL) {

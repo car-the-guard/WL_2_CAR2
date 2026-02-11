@@ -15,6 +15,7 @@
 #include "val_msg.h"
 #include "driving_mgr.h"
 #include "proto_wl2.h"
+#include "v2x_util.h"
 //#include "i2c_io.h"
 
 #define MAX_ACCIDENTS 20
@@ -81,7 +82,7 @@ void *thread_val(void *arg) {
         wl1_packet_t *rx = Q_pop(&q_pkt_val);
     
         if (rx) {
-            DBG_INFO("thread_val Got Data!%X\n");
+            DBG_INFO("thread_val Got Data!\n");
             
             // 1. 내 현재 상태 스냅샷 가져오기
             pthread_mutex_lock(&g_driving_status.lock);
@@ -101,11 +102,14 @@ void *thread_val(void *arg) {
             double target_lon = (double)raw_lon / 1000000.0;
             double target_alt = (double)raw_alt_mm / 1000.0;
 
+            // DBG_INFO("[DEBUG] %.6f %.6f %.6f %.6f", target_lat, target_lon, my_lat, my_lon);
+
             double dist_2d = calc_dist(my_lat, my_lon, target_lat, target_lon);
             double alt_diff = fabs(my_alt - target_alt);
             int head_diff = get_angle_diff(my_heading, acc_heading);
 
-            DBG_INFO("[CHECK] 수신: From 0x%X, 거리:%.2fm, 고도차:%.1fm, 방향차:%d도\n", 
+            DBG_INFO("[check] 0x%lX", rx->sender.sender_id);
+            DBG_INFO("[CHECK] 수신: From 0x%X, 거리:%.6fm, 고도차:%.1fm, 방향차:%d도\n", 
                     rx->sender.sender_id, dist_2d, alt_diff, head_diff);
             
             // 유효 범위 및 방향성 필터링
@@ -287,10 +291,10 @@ void *thread_val(void *arg) {
                 //wl2->sev_rsv = (accident_list[best_idx].data.analysis.is_danger ? 0x10 : 0x00);
                 
                 Q_push(&q_val_yocto, wl2);
-                printf("[VAL] WL-2 보고 -> ID: 0x%lX, Dist: %.1fm\n",
-                       (unsigned long)accident_list[best_idx].data.accident.accident_id, min_dist);
-                DBG_INFO("VAL: Reporting Nearest -> ID: 0x%lX, Dist: %.1fm",
-                         accident_list[best_idx].data.accident.accident_id, min_dist);
+                DBG_INFO("[VAL] WL-2 보고 -> ID: 0x%lX, Dist: %dm\n",
+                       (unsigned long)accident_list[best_idx].data.accident.accident_id, (uint16_t)min_dist);
+                DBG_INFO("VAL: Reporting Nearest -> ID: 0x%lX, Dist: %dm",
+                         accident_list[best_idx].data.accident.accident_id, (uint16_t)min_dist);
                 /* 38474 포트로 바이너리 전송 (방향 L/F/R, 거리, 위험도 1~3) */
                 {
                     uint8_t lane = accident_list[best_idx].data.accident.lane;

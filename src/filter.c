@@ -7,7 +7,7 @@
 #include "queue.h"
 #include "proto_wl1.h"
 #include "driving_mgr.h"
-
+#include "debug.h"
 #define RSU_ID_MAX    0x0FFF
 #define MAX_RANGE     1000.0
 #define HEADING_LIMIT 45
@@ -24,6 +24,7 @@ void *thread_filter(void *arg) {
 
     while (g_keep_running) {
         wl1_packet_t *pkt = Q_pop(&q_rx_filter);
+        DBG_INFO("[BEFORE Filter] %lX", pkt->sender.sender_id);
         if (!pkt) { usleep(1000); continue; }
 
         // 1. 루프백(내 패킷) 차단
@@ -69,12 +70,13 @@ void *thread_filter(void *arg) {
         if (is_rsu || is_high_severity || is_very_close) {
             // 긴급/우선순위 패킷: 우선순위 큐(q_filter_sec_urgent)로 전송
             // 만약 별도 큐가 없다면 일반 큐의 가장 앞으로 넣는(Push_Front) 등의 처리가 필요합니다.
+            DBG_INFO("[AFTER Filter] %lX", pkt->sender.sender_id);
             Q_push(&q_filter_sec_urgent, pkt); 
-            printf("[FILTER-PRIORITY] Urgent Packet Sent! ID: 0x%lX, Dist: %.1fm\n", 
-                    pkt->accident.accident_id, dist);
+            DBG_INFO("[FILTER-PRIORITY] Urgent Packet Sent! ID: 0x%lX, Dist: %.1fm\n", pkt->accident.accident_id, dist);
         } 
         else {
             // 일반 패킷: 일반 검증 큐로 전송
+            DBG_INFO("[AFTER Filter] %lX", pkt->sender.sender_id);
             Q_push(&q_filter_sec_rx, pkt);
         }
 

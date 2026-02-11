@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 
+
 bool is_forward(double my_lat, double my_lon, int my_head, double target_lat, double target_lon) {
     // 1. 위경도 차이를 미터 단위로 근사 (한국 위도 기준)
     double dx = (target_lon - my_lon) * 88804.0; 
@@ -22,6 +23,7 @@ bool is_forward(double my_lat, double my_lon, int my_head, double target_lat, do
 double calc_dist(double lat1, double lon1, double lat2, double lon2) {
     double dlat = (lat2 - lat1) * 111319.9;
     double dlon = (lon2 - lon1) * 88804.0;
+
     return sqrt(dlat * dlat + dlon * dlon);
 }
 
