@@ -108,7 +108,7 @@ void *thread_val(void *arg) {
             double alt_diff = fabs(my_alt - target_alt);
             int head_diff = get_angle_diff(my_heading, acc_heading);
 
-            DBG_INFO("[check] 0x%lX", rx->sender.sender_id);
+            //DBG_INFO("[check] 0x%lX", rx->sender.sender_id);
             DBG_INFO("[CHECK] 수신: From 0x%X, 거리:%.6fm, 고도차:%.1fm, 방향차:%d도\n", 
                     rx->sender.sender_id, dist_2d, alt_diff, head_diff);
             

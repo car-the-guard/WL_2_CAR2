@@ -29,7 +29,9 @@ void *thread_filter(void *arg) {
 
         // 1. 루프백(내 패킷) 차단
         if (pkt->sender.sender_id == g_sender_id) {
-            free(pkt); continue;
+            free(pkt);
+            DBG_INFO("[FILTER] Self Dropped! Sender ID: 0x%lX \n", pkt->sender.sender_id); 
+            continue;
         }
 
         // 2. 내 현재 위치 및 방향 정보 스냅샷
