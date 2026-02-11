@@ -69,6 +69,9 @@ void *thread_sec_rx(void *arg) {
         pkt = Q_pop_nowait(&q_filter_sec_urgent);
         // DBG_INFO("[SEC-RX] Verifying packet from 11 0x%X", pkt->sender.sender_id);
 
+        // 만약 긴급 큐에서 NULL을 받았다면 (종료 신호)
+        if (pkt == NULL && !g_keep_running) break;
+
         Q_push(&q_sec_rx_pkt, pkt); 
         
         // [STEP 2] 긴급 패킷이 없으면 일반 큐에서 대기 (여기서 블로킹)
@@ -82,6 +85,7 @@ void *thread_sec_rx(void *arg) {
             Q_push(&q_sec_rx_pkt, pkt); 
             
             if (pkt == NULL) {
+                if (!g_keep_running) break; // 종료 신호면 루프 탈출
                 usleep(5000); // 데이터가 아예 없으면 5ms 쉬고 다시 긴급 큐부터 확인
                 continue;
             }

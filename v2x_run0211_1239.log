@@ -1,0 +1,943 @@
+11 Feb 03:40:54 ntpdate[11808]: adjust time server 211.108.117.211 offset +0.001776 sec
+[DEBUG] Log System Initialized (KST Timezone applied)
+[12:40:54.918][INFO ][src/gps.c:13] GPS: Mock Mode Initialized.
+--- Integrated V2X System Start ---
+[12:40:54.918][INFO ][src/wl.c:59] Thread 1: Wireless RX Module started.
+[FILTER] Thread Started: Physical Gateway Mode
+[12:40:54.919][INFO ][src/sec.c:63] Thread 2: Security RX Module started.
+[12:40:54.919][INFO ][src/pkt.c:142]   - PKT-RX Sub-thread started.
+[12:40:54.919][INFO ][src/val.c:75] Thread 4: VAL Controller started.
+[12:40:54.919][INFO ][src/pkt.c:51]   - PKT-TX Sub-thread started (Dual-Path Aggregation).
+[12:40:54.919][INFO ][src/sec.c:43] Thread 7: Security TX Module started.
+[12:40:54.919][INFO ][src/gps.c:34] Thread 7: GPS Client Module started.
+[12:40:54.919][INFO ][src/yocto_if.c:132] Thread 9: Yocto Interface Module started (UART3 Mode).
+[12:40:54.919][INFO ][src/yocto_if.c:133] [T9] UART3 모듈 시작 (WL2/3: 50ms, WL4: 30s 주기)
+[12:40:54.919][INFO ][src/wl.c:88] Thread 8: Wireless TX Module started.
+[GPS-SIM] 내 차 이동 중... Lat: 37.565500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567800, Lon: 126.978000
+[12:41:19.904][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.904][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:19.904][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:19.904][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 122.5m
+
+[12:41:19.906][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x0, Accident: 0x1234567812345678)
+[12:41:19.906][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:19.906][INFO ][src/val.c:112] [CHECK] 수신: From 0x0, 거리:122.451890m, 고도차:0.0m, 방향차:40도
+
+[12:41:19.906][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:19.906][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:19.906][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:41:19.906][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 122m
+
+[12:41:19.906][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 122m
+[12:41:19.910][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:19.910][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.910][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:19.910][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:19.910][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:41:19.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:122m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.567900, Lon: 126.978000
+[12:41:19.922][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.922][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:19.922][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:19.922][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 111.3m
+
+[12:41:19.926][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:41:19.926][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:19.926][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:111.319900m, 고도차:0.0m, 방향차:40도
+
+[12:41:19.926][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:19.926][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:19.930][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:19.930][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[03:41:19.930][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:19.930][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:19.930][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:41:19.943][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.943][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:19.943][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:19.943][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 111.3m
+
+[12:41:19.947][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:41:19.947][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:19.947][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:111.319900m, 고도차:0.0m, 방향차:40도
+
+[12:41:19.947][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:19.947][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:19.950][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:19.950][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:19.950][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.950][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:19.950][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:41:19.966][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.966][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:19.966][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:19.966][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 111.3m
+
+[12:41:19.967][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:41:19.967][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:19.967][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:111.319900m, 고도차:0.0m, 방향차:40도
+
+[12:41:19.967][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:19.967][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:19.970][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:19.970][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.970][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:19.970][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:19.970][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:41:19.986][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.986][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:19.986][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:19.986][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 111.3m
+
+[12:41:19.987][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:41:19.987][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:19.987][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:111.319900m, 고도차:0.0m, 방향차:40도
+
+[12:41:19.987][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:19.987][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:19.990][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:19.990][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:19.990][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:19.990][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:19.990][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:41:20.003][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:20.003][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:20.003][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:20.003][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 111.3m
+
+[12:41:20.007][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:41:20.008][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:20.008][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:111.319900m, 고도차:0.0m, 방향차:40도
+
+[12:41:20.008][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:20.008][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:20.008][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:41:20.008][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 111m
+
+[12:41:20.008][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 111m
+[12:41:20.011][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:20.011][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:20.011][INFO ][src/wl.c:97] [12:41:20.011][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:20.011][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:20.019][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:111m, Dir:F
+[12:41:20.023][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:20.023][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:20.023][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:20.023][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 111.3m
+
+[12:41:20.028][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:41:20.028][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:20.028][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:111.319900m, 고도차:0.0m, 방향차:40도
+
+[12:41:20.028][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:20.028][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:20.031][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:20.031][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:20.031][INFO ][src/wl.c:97] [12:41:20.031][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:20.031][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:20.043][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:20.043][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:20.043][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:20.043][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 111.3m
+
+[12:41:20.048][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:41:20.048][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:20.048][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:111.319900m, 고도차:0.0m, 방향차:40도
+
+[12:41:20.048][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[GPS-SIM] 내 차 이동 중... Lat: 37.568000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568200, Lon: 126.978000
+[12:41:23.907][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:23.907][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:23.907][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:23.907][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 77.9m
+
+[12:41:23.912][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:41:23.912][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:23.912][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:77.923930m, 고도차:0.0m, 방향차:40도
+
+[12:41:23.912][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:23.912][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:23.912][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:41:23.912][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 77m
+
+[12:41:23.912][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 77m
+[12:41:23.914][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:23.914][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:23.914][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:23.914][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:41:23.914][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:23.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:77m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.568300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568600, Lon: 126.978000
+[12:41:27.901][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:27.901][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:41:27.901][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:41:27.901][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 33.4m
+
+[12:41:27.903][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:41:27.903][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:41:27.903][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:33.395970m, 고도차:0.0m, 방향차:40도
+
+[12:41:27.903][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:41:27.903][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:41:27.903][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:41:27.903][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 33m
+
+[12:41:27.903][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 33m
+[12:41:27.908][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:41:27.908][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:41:27.908][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:27.908][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:41:27.908][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:41:27.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:33m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.568700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569000, Lon: 126.978000
+[12:41:31.906][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:31.906][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.569100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569400, Lon: 126.978000
+[12:41:35.910][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:35.910][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.569500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569800, Lon: 126.978000
+[12:41:39.905][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:39.905][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.569900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570200, Lon: 126.978000
+[12:41:43.914][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:43.914][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.570300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570600, Lon: 126.978000
+[12:41:47.904][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:47.904][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.570700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571000, Lon: 126.978000
+[12:41:51.908][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:51.908][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.571100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571400, Lon: 126.978000
+[12:41:55.902][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:55.902][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.571500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571800, Lon: 126.978000
+[12:41:59.907][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:41:59.907][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.571900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572200, Lon: 126.978000
+[12:42:03.901][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:03.901][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.572300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572600, Lon: 126.978000
+[12:42:07.906][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:07.906][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.572700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573000, Lon: 126.978000
+[12:42:11.913][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:11.914][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.573100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573400, Lon: 126.978000
+[12:42:15.904][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:15.904][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.573500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574200, Lon: 126.978000
+[12:42:23.903][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:23.903][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.574300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574600, Lon: 126.978000
+[12:42:27.907][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:27.907][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.574700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.575000, Lon: 126.978000
+[12:42:30.926][INFO ][src/gps.c:77] GPS: 위치 리셋 (시뮬레이션 반복)
+[12:42:31.901][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:31.901][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:42:31.901][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:42:31.903][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:42:31.903][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:42:31.903][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:389.619650m, 고도차:0.0m, 방향차:40도
+
+[12:42:31.903][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:42:31.903][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:42:31.903][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:42:31.903][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 389m
+
+[12:42:31.903][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 389m
+[12:42:31.911][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:42:31.911][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:31.911][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:42:31.911][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:42:31.911][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:42:31.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:389m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.565500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565800, Lon: 126.978000
+[12:42:35.906][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:35.906][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:42:35.906][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:42:35.909][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:42:35.909][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:42:35.909][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:345.091690m, 고도차:0.0m, 방향차:40도
+
+[12:42:35.909][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:42:35.909][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:42:35.909][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:42:35.909][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 345m
+
+[12:42:35.909][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 345m
+[12:42:35.914][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:42:35.915][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:35.915][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:42:35.915][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:42:35.915][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:42:35.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:345m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.565900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566200, Lon: 126.978000
+[12:42:39.900][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:39.900][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:42:39.900][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:42:39.904][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:42:39.904][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:42:39.904][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:300.563730m, 고도차:0.0m, 방향차:40도
+
+[12:42:39.904][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:42:39.904][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:42:39.904][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:42:39.904][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 300m
+
+[12:42:39.904][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 300m
+[12:42:39.909][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:42:39.909][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:39.909][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:42:39.909][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:42:39.909][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:42:39.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:300m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.566300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566600, Lon: 126.978000
+[12:42:43.905][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:43.905][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:42:43.905][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:42:43.910][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:42:43.910][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:42:43.910][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:256.035770m, 고도차:0.0m, 방향차:40도
+
+[12:42:43.910][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:42:43.910][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:42:43.910][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:42:43.910][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 256m
+
+[12:42:43.910][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 256m
+[12:42:43.913][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:42:43.913][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:43.913][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:42:43.913][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:42:43.913][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:42:43.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:256m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.566700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567000, Lon: 126.978000
+[12:42:47.909][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:47.909][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:42:47.909][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:42:47.911][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:42:47.911][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:42:47.911][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:211.507810m, 고도차:0.0m, 방향차:40도
+
+[12:42:47.911][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:42:47.911][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:42:47.911][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:42:47.911][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 211m
+
+[12:42:47.911][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 211m
+[12:42:47.917][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:42:47.917][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:47.917][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:42:47.917][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:42:47.917][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:42:47.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:211m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.567100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567400, Lon: 126.978000
+[12:42:51.903][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:51.903][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:42:51.903][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:42:51.903][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 167.0m
+
+[12:42:51.906][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:42:51.906][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:42:51.906][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:166.979850m, 고도차:0.0m, 방향차:40도
+
+[12:42:51.906][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:42:51.906][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:42:51.906][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:42:51.906][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 166m
+
+[12:42:51.906][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 166m
+[12:42:51.910][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:42:51.911][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:51.911][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:42:51.911][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:42:51.911][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:42:51.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:166m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.567500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567800, Lon: 126.978000
+[12:42:55.908][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:55.908][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:42:55.908][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:42:55.908][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 122.5m
+
+[12:42:55.912][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:42:55.912][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:42:55.912][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:122.451890m, 고도차:0.0m, 방향차:40도
+
+[12:42:55.912][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:42:55.912][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:42:55.912][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:42:55.912][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 122m
+
+[12:42:55.912][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 122m
+[12:42:55.915][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:42:55.915][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:55.915][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:42:55.915][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:42:55.915][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:42:55.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:122m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.567900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568200, Lon: 126.978000
+[12:42:59.902][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:59.902][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:42:59.902][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:42:59.902][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 77.9m
+
+[12:42:59.902][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:42:59.902][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:42:59.902][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:77.923930m, 고도차:0.0m, 방향차:40도
+
+[12:42:59.902][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:42:59.902][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:42:59.902][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:42:59.902][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 77m
+
+[12:42:59.902][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 77m
+[12:42:59.909][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:42:59.909][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:42:59.909][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:42:59.909][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:42:59.909][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:42:59.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:77m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.568300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568600, Lon: 126.978000
+[12:43:03.906][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:03.906][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:43:03.906][INFO ][src/filter.c:75] [AFTER Filter] 1111
+[12:43:03.906][INFO ][src/filter.c:77] [FILTER-PRIORITY] Urgent Packet Sent! ID: 0x1234567812345678, Dist: 33.4m
+
+[12:43:03.908][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:43:03.908][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:43:03.908][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:33.395970m, 고도차:0.0m, 방향차:40도
+
+[12:43:03.908][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:43:03.908][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:43:03.908][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:43:03.908][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 33m
+
+[12:43:03.908][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 33m
+[12:43:03.913][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:43:03.913][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:03.913][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:43:03.913][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:43:03.913][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:43:03.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:33m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.568700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.568900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569000, Lon: 126.978000
+[12:43:07.900][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:07.900][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.569100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569400, Lon: 126.978000
+[12:43:11.904][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:11.904][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.569500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.569800, Lon: 126.978000
+[12:43:15.909][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:15.909][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.569900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570200, Lon: 126.978000
+[12:43:19.903][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:19.903][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.570300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570600, Lon: 126.978000
+[12:43:23.908][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:23.908][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.570700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.570900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571000, Lon: 126.978000
+[12:43:27.902][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:27.902][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.571100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571400, Lon: 126.978000
+[12:43:31.906][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:31.906][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.571500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.571800, Lon: 126.978000
+[12:43:35.900][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:35.900][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.571900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572200, Lon: 126.978000
+[12:43:39.904][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:39.904][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.572300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572600, Lon: 126.978000
+[12:43:43.908][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:43.908][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.572700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.572900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573000, Lon: 126.978000
+[12:43:47.903][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:47.903][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.573100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573200, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573400, Lon: 126.978000
+[12:43:51.907][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:51.907][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.573500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.573800, Lon: 126.978000
+[12:43:55.901][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:55.901][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.573900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574200, Lon: 126.978000
+[12:43:59.905][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:43:59.905][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.574300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574600, Lon: 126.978000
+[12:44:03.899][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:03.899][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[GPS-SIM] 내 차 이동 중... Lat: 37.574700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.574900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.575000, Lon: 126.978000
+[12:44:06.933][INFO ][src/gps.c:77] GPS: 위치 리셋 (시뮬레이션 반복)
+[12:44:07.904][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:07.904][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:44:07.904][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:44:07.909][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:44:07.909][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:44:07.909][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:389.619650m, 고도차:0.0m, 방향차:40도
+
+[12:44:07.909][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:44:07.909][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:44:07.909][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 389m
+
+[12:44:07.909][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 389m
+[12:44:07.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:389m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.565500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565600, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.565800, Lon: 126.978000
+[12:44:11.908][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:11.908][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:44:11.908][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:44:11.909][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:44:11.909][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:44:11.909][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:345.091690m, 고도차:0.0m, 방향차:40도
+
+[12:44:11.909][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:44:11.909][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:44:11.909][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:44:11.910][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 345m
+
+[12:44:11.910][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 345m
+[12:44:11.911][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:44:11.911][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:11.911][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:44:11.911][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:44:11.911][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:44:11.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:345m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.565900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566000, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566100, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566200, Lon: 126.978000
+[12:44:15.902][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:15.902][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:44:15.902][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:44:15.905][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:44:15.905][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:44:15.905][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:300.563730m, 고도차:0.0m, 방향차:40도
+
+[12:44:15.905][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:44:15.905][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:44:15.905][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:44:15.905][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 300m
+
+[12:44:15.905][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 300m
+[12:44:15.914][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:44:15.915][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:15.915][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:44:15.915][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:44:15.915][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:44:15.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:300m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.566300, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566400, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566500, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566600, Lon: 126.978000
+[12:44:19.906][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:19.906][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:44:19.906][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:44:19.910][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x1111, Accident: 0x1234567812345678)
+[12:44:19.910][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:44:19.910][INFO ][src/val.c:112] [CHECK] 수신: From 0x1111, 거리:256.035770m, 고도차:0.0m, 방향차:40도
+
+[12:44:19.911][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:44:19.911][INFO ][src/val.c:163] [RELAY-ACT] 사고 0x1234567812345678 정보 재전송 큐 삽입
+
+[12:44:19.911][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:44:19.911][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 256m
+
+[12:44:19.911][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 256m
+[12:44:19.918][INFO ][src/pkt.c:125] [PKT-TX] WL-1 전체 패킷 조립 완료 (SenderID: 0x2222, AccID: 0x1234567812345678)
+[12:44:19.919][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:19.919][INFO ][src/filter.c:27] [BEFORE Filter] 2222
+[12:44:19.919][INFO ][src/filter.c:33] [FILTER] Self Dropped! 
+
+[12:44:19.919][INFO ][src/wl.c:97] 
+[1;32m[T8-TX] WL-1 Broadcast Success! (ID: 0x2222)[0m
+
+[12:44:19.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:256m, Dir:F
+[GPS-SIM] 내 차 이동 중... Lat: 37.566700, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566800, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.566900, Lon: 126.978000
+[GPS-SIM] 내 차 이동 중... Lat: 37.567000, Lon: 126.978000
+[12:44:23.900][INFO ][src/wl.c:65] [1;32m[RX] Packet Received![0m
+
+[12:44:23.900][INFO ][src/filter.c:27] [BEFORE Filter] 1111
+[12:44:23.901][INFO ][src/filter.c:81] [AFTER Filter] 1111
+[12:44:23.901][INFO ][src/pkt.c:157] PKT-RX: Incoming Packet (Sender: 0x7F, Accident: 0x1234567812345678)
+[12:44:23.901][INFO ][src/val.c:85] thread_val Got Data!
+
+[12:44:23.901][INFO ][src/val.c:112] [CHECK] 수신: From 0x7F, 거리:211.507810m, 고도차:0.0m, 방향차:40도
+
+[12:44:23.901][INFO ][src/val.c:149] accident_list[0] 등록 -> ID:0x1234567812345678 (WL-2 후보)
+
+[12:44:23.901][INFO ][src/val.c:266] [VAL-DBG] 100ms 보고: active=1 best_idx=0 -> WL-2 생성
+
+[12:44:23.901][INFO ][src/val.c:294] [VAL] WL-2 보고 -> ID: 0x1234567812345678, Dist: 211m
+
+[12:44:23.901][INFO ][src/val.c:296] VAL: Reporting Nearest -> ID: 0x1234567812345678, Dist: 211m
+[12:44:23.919][INFO ][src/yocto_if.c:191] [T9-TX] WL-2 Sent (UART & Host Notify) -> Dist:211m, Dir:F

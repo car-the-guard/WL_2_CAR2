@@ -24,13 +24,13 @@ void *thread_filter(void *arg) {
 
     while (g_keep_running) {
         wl1_packet_t *pkt = Q_pop(&q_rx_filter);
-        DBG_INFO("[BEFORE Filter] %lX", pkt->sender.sender_id);
+        DBG_INFO("[BEFORE Filter] %X", pkt->sender.sender_id);
         if (!pkt) { usleep(1000); continue; }
 
         // 1. 루프백(내 패킷) 차단
         if (pkt->sender.sender_id == g_sender_id) {
             free(pkt);
-            DBG_INFO("[FILTER] Self Dropped! Sender ID: 0x%lX \n", pkt->sender.sender_id); 
+            DBG_INFO("[FILTER] Self Dropped! \n"); 
             continue;
         }
 

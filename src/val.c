@@ -178,7 +178,7 @@ void *thread_val(void *arg) {
 
         // [2] 주기적 보고 (0.5초마다)
         uint64_t now = get_now_ms();
-        if (now - last_report_ms >= 500) {
+        if (now - last_report_ms >= 100) {
             last_report_ms = now;
 
 
@@ -263,7 +263,7 @@ void *thread_val(void *arg) {
                 for (int i = 0; i < MAX_ACCIDENTS; i++)
                     if (accident_list[i].is_active && now - accident_list[i].last_seen_ms <= (TIMEOUT_SEC * 1000))
                         active_cnt++;
-                DBG_INFO("[VAL-DBG] 500ms 보고: active=%d best_idx=%d -> WL-2 %s\n",
+                DBG_INFO("[VAL-DBG] 100ms 보고: active=%d best_idx=%d -> WL-2 %s\n",
                        active_cnt, best_idx, (best_idx != -1) ? "생성" : "미생성");
             }
 
